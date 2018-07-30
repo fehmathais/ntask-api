@@ -4,6 +4,7 @@ import consign from "consign";
 const app = express();
 
 consign()
+  .include('db.js')
   .include('models')
   .then('libs/middlewares.js')
   .then('routes')
